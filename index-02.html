@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Phục hồi 98% độ đàn hồi sau 28 ngày với cơ chế G777 độc quyền.">
+  <title>VMGS Beauty – Serum Vàng Cao Cấp</title>
+
+  <!-- 🔑 BẮT BUỘC CHO PWA -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <meta name="theme-color" content="#B76E79">
+
+  <!-- CSS (giữ đơn giản để tập trung vào PWA) -->
+  <style>
+    body { font-family: Arial; padding: 2rem; text-align: center; }
+    .hero { margin: 2rem 0; }
+    .cta { background: #B76E79; color: white; padding: 0.8rem 2rem; border: none; border-radius: 30px; font-size: 1.1rem; }
+  </style>
+</head>
+<body>
+  <h1>Phục hồi 98% độ đàn hồi sau 28 ngày<br>với cơ chế G777 độc quyền</h1>
+  <p>Công nghệ peptide vàng Thụy Sĩ – thẩm thấu sâu 10 lớp da</p>
+  <div class="hero">
+    <button class="cta">✨ Sở Hữu Ngay Ưu Đãi</button>
+  </div>
+  <p>Chị Lan (Q.3) vừa mua Serum Vàng – 2 phút trước</p>
+
+  <!-- 🔑 ĐĂNG KÝ SERVICE WORKER -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')
+          .then(reg => console.log('SW registered:', reg.scope))
+          .catch(err => console.warn('SW failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>
